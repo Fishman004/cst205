@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary Page</title>
+    {{ bootstrap.load_css() }}
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h2>Dictionary Data</h2>
+        <ul style="list-style: none;">
+            {% for recipe, info in recipe_data.items() %}
+                <li><strong>{{ recipe }}</strong>: {{ info.main_ingredients }} — {{ info.description }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {{ bootstrap.load_js() }}
+</body>
+</html>
